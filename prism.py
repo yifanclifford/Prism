@@ -56,8 +56,8 @@ if __name__ == "__main__":
     T = io.mmread(path)
     run = sort2query(idx[:, 0:args.N])
     test = csr2test(T.tocsr())
-    evaluator = Evaluator({'recall', 'recip_rank_cut'})
+    evaluator = Evaluator({'recall'})
     evaluator.evaluate(run, test)
     result = evaluator.show(
-        ['recall_10', 'recip_rank_cut_10'])
+        ['recall_5', 'recall_10', 'recall_15', 'recall_20'])
     print(result)
