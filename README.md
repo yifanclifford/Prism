@@ -10,3 +10,8 @@ You can simply run the code by:
 ```python
 python3 prism.py
 ```
+
+For detailed settings of running, please command following:
+```python
+python3 prism.py -h
+```
