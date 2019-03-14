@@ -15,19 +15,16 @@ if __name__ == "__main__":
     parser.add_argument('--gpu', action='store_true', default=False,
                         help='enables CUDA training')
     parser.add_argument('--seed', type=int, default=1, help='random seed (default: 1)')
-    parser.add_argument('--log', type=int, default=1, metavar='N',
-                        help='how many batches to wait before logging training status')
-    parser.add_argument('--fold', help='specify the fold', type=int, default=1)
+    parser.add_argument('--fold', help='specify the fold (default 1)', type=int, default=1)
     parser.add_argument('--dir', help='dataset directory',
                         default='.')
-    parser.add_argument('--save', help='save model', action='store_true')
-    parser.add_argument('--initer', type=int, default=10)
+    parser.add_argument('--initer', type=int, default=10, help='number of iteraction to update S each epoch')
     parser.add_argument('--data', help='specify dataset', default='music')
     parser.add_argument('-N', help='number of recommended items', type=int, default=20)
     parser.add_argument('-a', '--alpha', help='parameter alpha', type=float, default=0.1)
     parser.add_argument('-l', '--lamb', help='parameter lambda', type=float, default=0.1)
     parser.add_argument('-g', '--gamma', help='parameter gamma', type=float, default=0.1)
-    parser.add_argument('-k', '--factor', help='number of factors', type=int, default=1)
+    parser.add_argument('-k', '--factor', help='dimensions of the projected space', type=int, default=1)
 
     args = parser.parse_args()
     torch.manual_seed(args.seed)
