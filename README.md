@@ -2,7 +2,7 @@
 
 Implementation of Prism for our paper published in sigIR 2017: Top-N Recommendation with High-Dimensional Side Information via Locality Preserving Projection
 
-The code is reimplemented in pytorch (>=1.0.0) with python (>=3.6).
+The code is reimplemented in pytorch (>=1.0.0) with python (>=3.6). You will also need the python package pytrec_eval (https://github.com/cvangysel/pytrec_eval).
 
 We provide a sample dataset ''music'': #user=188, #item=900, #rating=2716, #feature=3322. The music dataset is originally from Amazon review data (http://jmcauley.ucsd.edu/data/amazon/).
 
